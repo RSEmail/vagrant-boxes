@@ -1,0 +1,3 @@
+*.swp
+# Ignore ISO files downloaded by Veewee
+iso/

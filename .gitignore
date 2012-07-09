@@ -1,3 +1,5 @@
 *.swp
 # Ignore ISO files downloaded by Veewee
 iso/
+# Ignore .box files built by Veewee
+*.box

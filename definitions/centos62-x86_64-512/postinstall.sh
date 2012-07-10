@@ -24,7 +24,8 @@ yum -y install puppet facter ruby-devel rubygems
 yum -y clean all
 rm /etc/yum.repos.d/{puppetlabs,epel}.repo
 
-gem install --no-ri --no-rdoc chef
+#gem install --no-ri --no-rdoc chef
+curl -L http://www.opscode.com/chef/install.sh | bash
 
 # Installing vagrant keys
 mkdir /home/vagrant/.ssh

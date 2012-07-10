@@ -26,6 +26,7 @@ rm /etc/yum.repos.d/{puppetlabs,epel}.repo
 
 #gem install --no-ri --no-rdoc chef
 curl -L http://www.opscode.com/chef/install.sh | bash
+rm /tmp/chef-full-*.rpm
 
 # Installing vagrant keys
 mkdir /home/vagrant/.ssh

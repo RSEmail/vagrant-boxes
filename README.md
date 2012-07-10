@@ -19,6 +19,8 @@ Vagrant, which requires Virtualbox.
 
 ## Customized Boxes ##
 
+* centos6 - Points to the latest revision of CentOS6, if you don't want to
+worry about updating your Vagrantfiles for minor version increments
 * centos62-x86_64-512 - Customized version of the CentOS-6.2-x86_64-minimal
 template
 ** Upsize disk to 20GB

@@ -13,8 +13,8 @@ Vagrant, which requires Virtualbox.
 * Install Virtualbox from their
 (site)[https://www.virtualbox.org/wiki/Downloads]
 * Install Vagrant from the download link on their (site)[http://vagrantup.com/]
-* Install (Veewee)[https://github.com/jedi4ever/veewee/]:
-    gem install veewee
+* Install (Veewee)[https://github.com/jedi4ever/veewee/]
+  * gem install veewee
 * You're all set!
 
 ## Customized Boxes ##

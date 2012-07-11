@@ -5,10 +5,10 @@ Veewee::Session.declare({
     :disk_format => 'VDI',
     :hostiocache => 'off',
     :os_type_id => 'RedHat_64',
-    :iso_file => "CentOS-6.2-x86_64-minimal.iso",
-    :iso_src => "http://mirror.internode.on.net/pub/centos/6.2/isos/x86_64/" +
-        "CentOS-6.2-x86_64-minimal.iso",
-    :iso_md5 => "20dac370a6e08ded2701e4104855bc6e",
+    :iso_file => "CentOS-6.2-x86_64-netinstall.iso",
+    :iso_src => "http://mirror.rackspace.com/CentOS/6.2/isos/x86_64/" +
+        "CentOS-6.2-x86_64-netinstall.iso",
+    :iso_md5 => "7e7f4161a5c8c49032655e5f4ecd1f07",
     :iso_download_timeout => 1000,
     :boot_wait => "10",
     :boot_cmd_sequence => [
@@ -25,7 +25,7 @@ Veewee::Session.declare({
     :ssh_guest_port => "22",
     :sudo_cmd => "echo '%p'|sudo -S sh '%f'",
     :shutdown_cmd => "/sbin/halt -h -p",
-    :postinstall_files => [ "postinstall.sh"],
+    :postinstall_files => ["postinstall.sh"],
     :postinstall_timeout => 10000
 })
 

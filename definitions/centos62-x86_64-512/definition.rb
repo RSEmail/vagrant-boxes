@@ -17,7 +17,7 @@ Veewee::Session.declare({
     :kickstart_port => "7122",
     :kickstart_timeout => 10000,
     :kickstart_file => "ks.cfg",
-    :ssh_login_timeout => "100",
+    :ssh_login_timeout => "600",
     :ssh_user => "vagrant",
     :ssh_password => "vagrant",
     :ssh_key => "",

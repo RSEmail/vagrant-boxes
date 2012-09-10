@@ -2,7 +2,7 @@
 
 Hey, it's some Vagrant boxes! Isn't that nifty?!
 
-These configs originated from (Veewee)[https://github.com/jedi4ever/veewee/]
+These configs originated from [Veewee](https://github.com/jedi4ever/veewee/)
 and have been customized in some ways.
 
 ## Getting Set Up ##
@@ -11,9 +11,9 @@ Use and/or modification of these boxes requires Veewee, which requires
 Vagrant, which requires Virtualbox.
 
 * Install Virtualbox from their
-(site)[https://www.virtualbox.org/wiki/Downloads]
-* Install Vagrant from the download link on their (site)[http://vagrantup.com/]
-* Install (Veewee)[https://github.com/jedi4ever/veewee/]
+[site](https://www.virtualbox.org/wiki/Downloads)
+* Install Vagrant from the download link on their [site](http://vagrantup.com/)
+* Install [Veewee](https://github.com/jedi4ever/veewee/)
   * gem install veewee
 * You're all set!
 

@@ -6,7 +6,7 @@ Veewee::Session.declare({
     :hostiocache => 'off',
     :os_type_id => 'RedHat_64',
     :iso_file => "CentOS-6.2-x86_64-netinstall.iso",
-    :iso_src => "http://mirror.rackspace.com/CentOS/6.2/isos/x86_64/" +
+    :iso_src => "http://vault.centos.org/6.2/isos/x86_64/" +
         "CentOS-6.2-x86_64-netinstall.iso",
     :iso_md5 => "7e7f4161a5c8c49032655e5f4ecd1f07",
     :iso_download_timeout => 1000,
@@ -17,7 +17,7 @@ Veewee::Session.declare({
     :kickstart_port => "7122",
     :kickstart_timeout => 10000,
     :kickstart_file => "ks.cfg",
-    :ssh_login_timeout => "600",
+    :ssh_login_timeout => "1200",
     :ssh_user => "vagrant",
     :ssh_password => "vagrant",
     :ssh_key => "",

@@ -18,6 +18,8 @@ chown -R vagrant /home/vagrant/.ssh
 
 # Installing the virtualbox guest additions
 VBOX_VERSION=$(cat /home/vagrant/.vbox_version)
+# 4.2.1 was a special release just for OS X, treat as 4.2.0
+[ "$VBOX_VERSION" = "4.2.1" ] && VBOX_VERSION="4.2.0"
 cd /tmp
 curl -L -o VBoxGuestAdditions_$VBOX_VERSION.iso http://download.virtualbox.org/virtualbox/$VBOX_VERSION/VBoxGuestAdditions_$VBOX_VERSION.iso
 mount -o loop VBoxGuestAdditions_$VBOX_VERSION.iso /mnt

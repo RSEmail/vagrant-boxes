@@ -64,7 +64,10 @@ git clone git://github.com/opscode-cookbooks/apt.git
 git clone git://github.com/opscode-cookbooks/bluepill.git
 git clone git://github.com/opscode-cookbooks/build-essential.git
 git clone git://github.com/opscode-cookbooks/chef-client.git
-git clone git://github.com/opscode-cookbooks/chef-server.git
+git clone --branch iptables-and-permission-fixes git://github.com/RSEmail/chef-server.git
+#pushd chef-server
+#git checkout 1.1.0
+#popd
 git clone git://github.com/opscode-cookbooks/chef.git
 git clone git://github.com/opscode-cookbooks/couchdb.git
 git clone git://github.com/opscode-cookbooks/daemontools.git
@@ -72,6 +75,7 @@ git clone git://github.com/opscode-cookbooks/daemontools.git
 git clone --branch package-retries git://github.com/RSEmail/erlang.git
 #git clone git://github.com/opscode-cookbooks/gecode.git
 git clone --branch redhat-package git://github.com/RSEmail/gecode.git
+git clone git://github.com/RSEmail/iptables.git
 git clone git://github.com/opscode-cookbooks/java.git
 git clone git://github.com/opscode-cookbooks/nginx.git
 git clone git://github.com/opscode-cookbooks/openssl.git
@@ -116,9 +120,22 @@ EOF
 
 chef-solo -c /etc/chef/solo.rb -j /tmp/chef-client.json
 
+mkdir -p /root/.chef
+touch /root/.chef/knife.rb
+
 #Configure knife
-knife configure -i -s "http://localhost:4000" -u "chef-admin" -r "/root/cookbook-repos/chef-repo/" -y -d \
- || { echo "Failed to configure knife."; exit 1; }
+knife configure \
+    --initial \
+    --server-url "http://localhost:4000" \
+    --user "chef-admin" \
+    --repository "/tmp/cookbook-repos" \
+    --admin-client-name chef-webui \
+    --admin-client-key /etc/chef/webui.pem \
+    --validation-client-name chef-validator \
+    --validation-key /etc/chef/validation.pem \
+    --yes \
+    --disable-editing \
+    || { echo "Failed to configure knife."; exit 1; }
 
 yum -y clean all
 
